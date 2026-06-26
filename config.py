@@ -41,17 +41,17 @@ except ValueError:
 REQUIRED_CHANNELS = [
     {
         "name": "Wavemovies",
-        "username": "@wavemovies",
+        "username": "@wavemovies_chn",
         "url": "https://t.me/wavemovies_chn",
     },
     {
         "name": "Wave Backup",
-        "username": "@wavebackup",
+        "username": "-1003879166875",
         "url": "https://t.me/+hGSpcI4wK34xZjA0",
     },
     {
         "name": "Files Channel",
-        "username": "@wavefiles",
+        "username": "-1002247736269",
         "url": "https://t.me/+ARlpOEKqMBk4MTI0",
     },
 ]
