@@ -4,10 +4,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ─── Bot token from BotFather ─────────────────────────────────────────────────
-BOT_TOKEN = os.getenv("8681823299:AAG0aSwMfcszmCn8r2xrlWxmrP8BMdcCLVQ", "8681823299:AAG0aSwMfcszmCn8r2xrlWxmrP8BMdcCLVQ")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # ─── Your Telegram user ID (get it from @userinfobot) ─────────────────────────
-ADMIN_IDS = [int(x) for x in os.getenv("5045900150").split(",")]
+ADMIN_IDS = [int(x) for x in os.getenv("ADMIN_IDS").split(",")]
 
 # ─── Channels users MUST join before getting files ────────────────────────────
 # Format: {"name": "Display Name", "username": "@channel", "url": "invite link"}
