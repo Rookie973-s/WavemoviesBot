@@ -42,7 +42,17 @@ REQUIRED_CHANNELS = [
     {
         "name": "Wavemovies",
         "username": "@wavemovies",
-        "url": "https://t.me/wavemovies",
+        "url": "https://t.me/wavemovies_chn",
+    },
+    {
+        "name": "Wave Backup",
+        "username": "@wavebackup",
+        "url": "https://t.me/+FTIhdtx-3nFIMzc0",
+    },
+    {
+        "name": "Files Channel",
+        "username": "@wavefiles",
+        "url": "https://t.me/+dK1IC0727Z43ZWI8",
     },
 ]
 
