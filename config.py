@@ -1,7 +1,6 @@
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env (works locally)
 load_dotenv()
 
 # ──────────────────────────────────────────────────────────────
@@ -16,10 +15,6 @@ if not BOT_TOKEN:
 
 # ──────────────────────────────────────────────────────────────
 # ADMIN IDS
-# Supports one or more IDs separated by commas:
-# ADMIN_IDS=5045900150
-# or
-# ADMIN_IDS=5045900150,123456789
 # ──────────────────────────────────────────────────────────────
 admin_ids = os.getenv("ADMIN_IDS")
 
@@ -31,9 +26,7 @@ if not admin_ids:
 try:
     ADMIN_IDS = [int(x.strip()) for x in admin_ids.split(",")]
 except ValueError:
-    raise RuntimeError(
-        "ADMIN_IDS must contain only numbers separated by commas."
-    )
+    raise RuntimeError("ADMIN_IDS must contain only numbers separated by commas.")
 
 # ──────────────────────────────────────────────────────────────
 # REQUIRED CHANNELS
@@ -67,6 +60,20 @@ if not MONGO_URI:
     )
 
 DB_NAME = "wavemovies"
+
+# ──────────────────────────────────────────────────────────────
+# AUTO-DELETE
+# Set AUTO_DELETE_SECONDS in env to enable timed file/batch deletion.
+# Examples:
+#   AUTO_DELETE_SECONDS=300   →  5 minutes
+#   AUTO_DELETE_SECONDS=3600  →  1 hour
+#   AUTO_DELETE_SECONDS=0     →  disabled (default)
+# ──────────────────────────────────────────────────────────────
+_raw_ttl = os.getenv("AUTO_DELETE_SECONDS", "0")
+try:
+    AUTO_DELETE_SECONDS = int(_raw_ttl)
+except ValueError:
+    AUTO_DELETE_SECONDS = 0  # disabled if misconfigured
 
 # ──────────────────────────────────────────────────────────────
 # BOT SETTINGS
